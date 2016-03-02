@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.samset.percentrelativelayout.MainActivity">
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="#ff0000"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="25%" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@+id/view"
+            android:background="#ff0000"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="50%" />
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="10dp"
+            android:text="PercentRelativeLayout"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_widthPercent="60%" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv1"
+            android:text="Sample"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_widthPercent="40%" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/secondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstLayout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvfname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:text="First Name"
+            android:textSize="20dp"
+            app:layout_widthPercent="40%" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvfname"
+            android:hint="First name"
+            android:textSize="20dp"
+            app:layout_widthPercent="60%" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/ThirdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondLayout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvlname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvfname"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:text="Last Name"
+            android:textSize="20dp"
+            app:layout_widthPercent="40%" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvfname"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvlname"
+            android:hint="Last name"
+            android:textSize="20dp"
+            app:layout_widthPercent="60%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/fourthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ThirdLayout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvcontact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvfname"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:text="Contact no."
+            android:textSize="20dp"
+            app:layout_widthPercent="40%" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvcontact"
+            android:hint="Contact no."
+            android:textSize="20dp"
+            app:layout_widthPercent="60%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fourthLayout"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:hint="Submit"
+            android:textSize="20dp"
+            app:layout_widthPercent="60%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:text="By samset"
+        android:textSize="10dp" />
+
+</RelativeLayout>
